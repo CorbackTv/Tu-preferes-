@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Préfères</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tu préfères...</h1>
+
+        <!-- Question container -->
+        <div id="question-container">
+            <p id="question">Question ici</p>
+            <div id="choices">
+                <button class="choice-btn" onclick="nextQuestion(0)">Choix 1</button>
+                <button class="choice-btn" onclick="nextQuestion(1)">Choix 2</button>
+            </div>
+        </div>
+
+        <!-- Formulaire pour créer une nouvelle question -->
+        <div id="create-question-container">
+            <h2>Créer une nouvelle question</h2>
+            <form id="create-form">
+                <input type="text" id="new-question" placeholder="Entrez la question" required>
+                <input type="text" id="choice-1" placeholder="Choix 1" required>
+                <input type="text" id="choice-2" placeholder="Choix 2" required>
+                <button type="submit">Ajouter la question</button>
+            </form>
+        </div>
+
+        <!-- Mode sombre -->
+        <button id="dark-mode-toggle" onclick="toggleDarkMode()">Mode Sombre</button>
+
+        <!-- Statistiques -->
+        <div id="statistics-container">
+            <h2>Statistiques</h2>
+            <ul id="stats"></ul>
+        </div>
+
+        <!-- Résultats -->
+        <div id="result-container" class="hidden">
+            <h2>Merci d'avoir joué !</h2>
+            <p id="summary"></p>
+            <button onclick="restartGame()">Recommencer</button>
+            <button onclick="shareResults()">Partager les résultats</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
